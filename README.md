@@ -31,7 +31,7 @@ The proposed ensemble model is made up of smaller deep neural networks. These ne
 ![alt text](NN_architecture.JPG?raw=true "Figure 01: X-ray image data samples") 
 Figure 3: Structure of the small neural network used as weak classifier in the ensemble model.
 
-![alt text](NN_architecture.JPG?raw=true "Figure 01: X-ray image data samples") 
+![alt text](rgbo1.JPG?raw=true "Figure 01: X-ray image data samples") 
 Figure 4: Structure of the small convolution neural network used as weak classifier in the ensemblemodel.
 
 The structural details of each smaller deep neural networks is shown in Fig. 3. Each neural networkhas 10000 nodes in input layers and one node in output layer. There are 10 hidden layers betweeninput and output layer. As the network grows deeper, number of nodes into each new layer reduces.These neural networks are modeled using models available in Keras library.Now, The structural details of each of CNN is shown in Fig. 4. Each of the CNN consists of kernelwindow size of 4x4 with stride one and Maxpooling of 2x2. This auto-encoder network compress thesize of the image to from 100x100 to 9x9 with minimum reconstruction error. After that, the layersare flatten and fully connected to dense layer with 500 nodes and rectified linear activation functionand then another dense layer with 20 nodes and finally the two output layer.
