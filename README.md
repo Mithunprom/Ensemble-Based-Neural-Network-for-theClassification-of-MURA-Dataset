@@ -4,4 +4,4 @@ Musculoskeletal Radiographs (MURA) dataset, proposed by Stamford MachineLearning
 
 Some of the images in the X-rays are given following:
 
-![alt text](![alt text](http://url/to/img.png))
+![alt text](![alt text](xray.JPG))
