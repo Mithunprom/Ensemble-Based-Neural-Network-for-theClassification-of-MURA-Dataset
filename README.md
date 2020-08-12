@@ -6,6 +6,14 @@ Some of the images in the X-rays are given following:
 
 ![alt text](xray.JPG?raw=true "Figure 01: X-ray image data samples")
 
-Figure 1: MURA dataset contains 14863 images of the radiography of musculoskeletal studies of theupper extremity. In each of the study multiple views are manually labeled by radiologists. Right sideof the above Figure explains some normally labeled images of Elbow and Wrist, respectively whereinleft side describes some abnormal images from the Humerus and Shoulder, respectively.
+Figure 1: MURA dataset contains 14863 images of the radiography of musculoskeletal studies of theupper extremity. In each of the study multiple views are manually labeled by radiologists. Right sideof the above Figure explains some normally labeled images of Elbow and Wrist, respectively whereinleft side describes some abnormal images from the Humerus and Shoulder, respectively. 
+
+There are some discriptive statistics based on the dataset are given following. 
+Figure  2:  Left:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.
+
+![alt text](std.JPG?raw=true "Figure 01: X-ray image data samples")
+
+![alt text](stdhum.JPG?raw=true "Figure 01: X-ray image data samples") 
 
 
+Figure  2:  Left:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.   In  trainset XR_WRIST has maximum number of patients, followed by XR_FINGER, XR_HUMERUS,XR_SHOULDER, XR_HAND, XR_ELBOW and XR_FOREARM. X_FOREARM with 606 patientshas  got  the  least  number.   Similar  pattern  can  be  seen  in  valid  set,  XR_WRIST  has  the  maxi-mum, followed by XR_FINGER, XR_SHOULDER, XR_HUMEROUS, XR_HAND, XR_ELBOW,XR_FOREARM. Here XR_FINGER defines radiographs of Finger upper extremity.  Right: DataStatistics for Humerus Data
