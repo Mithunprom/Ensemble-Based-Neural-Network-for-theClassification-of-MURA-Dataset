@@ -4,4 +4,7 @@ Musculoskeletal Radiographs (MURA) dataset, proposed by Stamford MachineLearning
 
 Some of the images in the X-rays are given following:
 
-(Figure 1: MURA dataset contains 14863 images of the radiography of musculoskeletal studies of theupper extremity. In each of the study multiple views are manually labeled by radiologists. Right sideof the above Figure explains some normally labeled images of Elbow and Wrist, respectively whereinleft side describes some abnormal images from the Humerus and Shoulder, respectively.![alt text](xray.JPG))
+![alt text](xray.JPG)
+Figure 1: MURA dataset contains 14863 images of the radiography of musculoskeletal studies of theupper extremity. In each of the study multiple views are manually labeled by radiologists. Right sideof the above Figure explains some normally labeled images of Elbow and Wrist, respectively whereinleft side describes some abnormal images from the Humerus and Shoulder, respectively.
+
+
