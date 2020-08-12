@@ -21,3 +21,20 @@ Figure  2:  Left:  Statistics  of  the  data  in  each  of  the  seven  categori
 <h2> Image Classification Task</h2>
 <p1>The task in MURA dataset is to find the binary class of{0,1}.  Each study contains one or moreviews of images and the expected output is then denoted as 0 or 1. We denote 0 as normal and 1 asabnormal. A brief summary of the study data is given below:In the official MURA dataset website (https://stanfordmlgroup.github.io/competitions/mura/) we can see the performance of various authors model in different categories. Some of thesemodel perform well for different categories.  But For upper extremity categories:  Humerus andFinger, almost all of the models perform worst. This may be due to the fact that, the images in thesecategories are not so clear. Also, the number of samples are not sufficiently high in these categories.We can look that in right side of Fig. 1, these images are not so clear to be easily classified by themodels. Thus, for this reason, we concentrate our model to the Humerus cases. In left side of Fig. 2,we can also see that number of studied patients are very few for both training and test dataset inHumerus study. </p1> 
 
+<h2>Modeling</h2>
+<p1>In order to investigate the types of abnormalities present in the dataset, we reviewed the radiologistreports to manually label 100 abnormal studies with the abnormality finding: 53 studies were labeledwith fractures, 48 with hardware, 35 with degenerative joint diseases, and 29 with other abnormalitiesincluding lesions and subluxations.
+The proposed ensemble model is made up of smaller deep neural networks. These neural networks aretrained on the train data from humerus X-ray images of MURA using the Adaboost algorithm (Freundand Schapire [1999]). Section 3.1 explains the structures and training of each of these smaller neuralnetworks. Section 3.2 explains the overall ensemble training and prediction methods.
+  </p1>
+<p2>
+
+
+![alt text](NN_architecture.JPG?raw=true "Figure 01: X-ray image data samples") 
+Figure 3: Structure of the small neural network used as weak classifier in the ensemble model.
+
+![alt text](NN_architecture.JPG?raw=true "Figure 01: X-ray image data samples") 
+Figure 4: Structure of the small convolution neural network used as weak classifier in the ensemblemodel.
+
+The structural details of each smaller deep neural networks is shown in Fig. 3. Each neural networkhas 10000 nodes in input layers and one node in output layer. There are 10 hidden layers betweeninput and output layer. As the network grows deeper, number of nodes into each new layer reduces.These neural networks are modeled using models available in Keras library.Now, The structural details of each of CNN is shown in Fig. 4. Each of the CNN consists of kernelwindow size of 4x4 with stride one and Maxpooling of 2x2. This auto-encoder network compress thesize of the image to from 100x100 to 9x9 with minimum reconstruction error. After that, the layersare flatten and fully connected to dense layer with 500 nodes and rectified linear activation functionand then another dense layer with 20 nodes and finally the two output layer.
+
+</p2>
+
