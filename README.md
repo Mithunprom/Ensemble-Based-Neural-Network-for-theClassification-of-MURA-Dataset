@@ -9,14 +9,14 @@ Some of the images in the X-rays are given following:
 Figure 1: MURA dataset contains 14863 images of the radiography of musculoskeletal studies of theupper extremity. In each of the study multiple views are manually labeled by radiologists. Right sideof the above Figure explains some normally labeled images of Elbow and Wrist, respectively whereinleft side describes some abnormal images from the Humerus and Shoulder, respectively. 
 
 There are some discriptive statistics based on the dataset are given following. 
-Figure  2:  Left:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.
+Figure  2:  Upper:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.
 
 ![alt text](std.JPG?raw=true "Figure 01: X-ray image data samples")
 
 ![alt text](stdhum.JPG?raw=true "Figure 01: X-ray image data samples") 
 
 
-Figure  2:  Left:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.   In  trainset XR_WRIST has maximum number of patients, followed by XR_FINGER, XR_HUMERUS,XR_SHOULDER, XR_HAND, XR_ELBOW and XR_FOREARM. X_FOREARM with 606 patientshas  got  the  least  number.   Similar  pattern  can  be  seen  in  valid  set,  XR_WRIST  has  the  maxi-mum, followed by XR_FINGER, XR_SHOULDER, XR_HUMEROUS, XR_HAND, XR_ELBOW,XR_FOREARM. Here XR_FINGER defines radiographs of Finger upper extremity.  Right: DataStatistics for Humerus Data
+Figure  2:  Lower:  Statistics  of  the  data  in  each  of  the  seven  categories  of  the  studies.   In  trainset XR_WRIST has maximum number of patients, followed by XR_FINGER, XR_HUMERUS,XR_SHOULDER, XR_HAND, XR_ELBOW and XR_FOREARM. X_FOREARM with 606 patientshas  got  the  least  number.   Similar  pattern  can  be  seen  in  valid  set,  XR_WRIST  has  the  maxi-mum, followed by XR_FINGER, XR_SHOULDER, XR_HUMEROUS, XR_HAND, XR_ELBOW,XR_FOREARM. Here XR_FINGER defines radiographs of Finger upper extremity.  Right: DataStatistics for Humerus Data
 
 <h2> Image Classification Task</h2>
 <p1>The task in MURA dataset is to find the binary class of{0,1}.  Each study contains one or moreviews of images and the expected output is then denoted as 0 or 1. We denote 0 as normal and 1 asabnormal. A brief summary of the study data is given below:In the official MURA dataset website (https://stanfordmlgroup.github.io/competitions/mura/) we can see the performance of various authors model in different categories. Some of thesemodel perform well for different categories.  But For upper extremity categories:  Humerus andFinger, almost all of the models perform worst. This may be due to the fact that, the images in thesecategories are not so clear. Also, the number of samples are not sufficiently high in these categories.We can look that in right side of Fig. 1, these images are not so clear to be easily classified by themodels. Thus, for this reason, we concentrate our model to the Humerus cases. In left side of Fig. 2,we can also see that number of studied patients are very few for both training and test dataset inHumerus study. </p1> 
@@ -29,16 +29,18 @@ The proposed ensemble model is made up of smaller deep neural networks. These ne
 
 
 ![alt text](NN_architecture.JPG?raw=true "Figure 01: X-ray image data samples") 
+
 Figure 3: Structure of the small neural network used as weak classifier in the ensemble model.
 
 ![alt text](rgbo1.JPG?raw=true "Figure 01: X-ray image data samples") 
+
 Figure 4: Structure of the small convolution neural network used as weak classifier in the ensemblemodel.
 
 The structural details of each smaller deep neural networks is shown in Fig. 3. Each neural networkhas 10000 nodes in input layers and one node in output layer. There are 10 hidden layers betweeninput and output layer. As the network grows deeper, number of nodes into each new layer reduces.These neural networks are modeled using models available in Keras library.Now, The structural details of each of CNN is shown in Fig. 4. Each of the CNN consists of kernelwindow size of 4x4 with stride one and Maxpooling of 2x2. This auto-encoder network compress thesize of the image to from 100x100 to 9x9 with minimum reconstruction error. After that, the layersare flatten and fully connected to dense layer with 500 nodes and rectified linear activation functionand then another dense layer with 20 nodes and finally the two output layer.
 
 </p2>
 
-<h2><Model Performance/h2>
+<h2><Model Performance</h2>
 
 <table style="width:100%">
   <tr>
