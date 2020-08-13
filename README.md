@@ -42,15 +42,15 @@ The structural details of each smaller deep neural networks is shown in Fig. 3. 
 
 <table style="width:100%">
   <tr>
-    <th>Dataset</th> <th>Radiologist </th> <th>Proposed Model(NN)(Epoch = 20) </th>
+    <th>Dataset</th> <th>Proposed Model(NN)(Epoch = 20) </th>
     </th> <th>Proposed Model(NN)(Epoch = 30) </th>
     </th> <th>Proposed Model(CNN)(Epoch = 20) </th>
     </th> <th>Proposed Model(CNN)(Epoch = 30) </th>
   </tr>
   <tr>
-  <td>Validation .0250</td><td> .050</td><td> 0.119</td><td> 0.123</td>
+  <td>Validation</td><td>.0250</td><td> .050</td><td> 0.119</td><td> 0.123</td>
   </tr>
   <tr>
-    <td>Train 0.319</td><td> 0.441</td><td>0.4590</td><td> 0.51</td>
+    <td>Train </td><td> 0.319</td><td> 0.441</td><td>0.4590</td><td> 0.51</td>
   </tr>
 </table>
