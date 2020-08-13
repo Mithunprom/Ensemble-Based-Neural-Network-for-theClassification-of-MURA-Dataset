@@ -1,18 +1,20 @@
 <h1>Authors</h1>
-Mithun Ghosh and Md Sahil Hassan
+<ul><li>Mithun Ghosh<li> and <li>Md Sahil Hassan<li><ul>
 
 
 This repository contains a Neural Network and Convolution Neural Network based Ensemble model for classifying MURA humerus dataset.
 
 Libraries used-
-
-Keras
-Tensorflow
-Numpy
+<ul>
+<li>Keras</li>
+<li>Tensorflow</li>
+<li>Numpy</li>
+  </ul>
+Dataset in Avaiable in <a href="Convol_MURA.ipynb">link 'here'</a>
 Instructions for Running
-1. Make sure you have the necessary libaries installed.
-2. Run the 'main.py' file as-
-''' python3 main.py '''. As for the CNN, the juperter file name "Convol_MURA.ipynb" has been provided. 
+<ol><li> Make sure you have the necessary libaries installed.</li>
+<li> Run the <a href="main.py">link 'main.py'</a> file as-
+''' python3 main.py '''. As for the CNN, the juperter file name <a href="Convol_MURA.ipynb">link 'Convol_MURA.ipynb'</a> has been provided. </li>
 
 # Ensemble-Based-Neural-Network-for-theClassification-of-MURA-Dataset
 Musculoskeletal Radiographs (MURA) dataset, proposed by Stamford MachineLearning (ML) group, contains 40,561 images of bone X-rays from 14,863 studies.The X-ray images belong to seven body areas of upper extremity- Wrist, Elbow,Finger, Humerus, Forearm, Hand, and Shoulder. The data are classified manually byradiologists into two classes- normal or abnormal. These data samples are labeledusing majority vote by six board-certified Stanford radiologists. The majority votesof these radiologists’ labels are considered as gold standard. The presence of suchrich,complex and diverse labeled dataset inspires to build an accurate but simplermodel for bone anomaly detection. The model proposed by Stamford ML group isa 169 layer deep computationally complex Neural Network (NN), that requires aGraphical Processing Unit (GPU) for implementation. This leads to the necessityof smaller neural network based model that are executable on general purposecomputers. Moreover, the 169 layer deep model works well on par with the goldstandard except for the humerus radiographs, despite the presence of humerusdata labeled with high accuracy. Therefore, in this work we propose an ensembleof smaller neural networks and convolution neural network for highly accurateclassification of MURA study images of humerus.  We use Adaboost algorithmto train this model.  The performance of this model is evaluated using trainingerror, validation error, and Cohen’s kappa coefficients. The model is available in this repo and the details of the project is breifly described <a href="Paper.pdf">link here</a>
