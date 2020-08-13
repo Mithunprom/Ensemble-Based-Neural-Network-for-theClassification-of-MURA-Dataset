@@ -1,6 +1,5 @@
 <h1>Authors</h1>
-Mithun Ghosh
-Md Sahil Hassan
+Mithun Ghosh and Md Sahil Hassan
 
 
 This repository contains a Neural Network and Convolution Neural Network based Ensemble model for classifying MURA humerus dataset.
